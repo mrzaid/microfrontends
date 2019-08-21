@@ -2,7 +2,6 @@ const ArticleModule = {
     namespaced: true,
     
     state: { 
-        count: 0,
         articles: [
             {id: 'article-1', title: 'Article #1', description: 'my', image: 'https://contentwriter.in/wp-content/uploads/2018/06/Service3-1024x598.jpg'},
             {id: 'article-2', title: 'Article #2', description: 'my', image: 'https://www.geartechnology.com/blog/wp-content/uploads/2016/09/articles-004.jpg'},
@@ -12,8 +11,12 @@ const ArticleModule = {
     },
     
     mutations: {
-        increment(state) {
-            state.count++
+        addArticle(state, payload) {
+            console.log('payload ', payload)
+            state.articles.push(payload);
+        },
+        deleteArticle(state, id) {
+            state.articles.splice(state.articles.findIndex(a => a.id == id), 1)
         }
     },
 

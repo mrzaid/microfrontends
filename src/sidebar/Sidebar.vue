@@ -6,19 +6,27 @@
         <a @click="navigateTo(item.path)">{{item.name}}</a>  
       </li>
     </ul>
+    <!-- <demo-image-picker @imageSelected="imageSelectHandler" /> -->
   </div>
 </template>
 
 <script>
-import {mapState} from 'vuex';
+import { mapState } from 'vuex';
+import ImagePicker from '../shared/demo-image-picker/image-picker';
+import { navigateTo } from '../shared/helper/index';
 export default {
-  components: {},
+  components: {
+    'demo-image-picker': ImagePicker
+  },
   computed: {
     ...mapState(["jwtToken", "modules"])
   },
   created() {},
   methods: {
-    navigateTo: url => window.history.pushState(null, null, url)
+    navigateTo,
+    imageSelectHandler(f) {
+
+    }
   }
 };
 </script>

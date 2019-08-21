@@ -3,6 +3,7 @@ import './registerServiceWorker';
 
 declareChildApplication('navbar', () => import('./navbar/main'), () => true);
 declareChildApplication('sidebar', () => import('./sidebar/main'), () => true);
+declareChildApplication('auth', () => import('./auth/main'), pathPrefix('/auth'));
 declareChildApplication('home', () => import('./home/main'), pathPrefix('/', ['/about']));
 declareChildApplication('about', () => import('./about/main'), pathPrefix('/about'));
 declareChildApplication('article', () => import('./article/main'), pathPrefix('/article'));

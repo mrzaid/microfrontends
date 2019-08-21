@@ -15,8 +15,9 @@
 </template>
 
 <script>
-import {mapActions, mapMutations, mapState } from 'vuex';
+import { mapActions, mapMutations, mapState } from 'vuex';
 import Input from '../shared/demo-input/input';
+import { navigateTo } from '../shared/helper/index';
 export default {
   components: {
     'demo-input': Input
@@ -34,7 +35,7 @@ export default {
     ...mapMutations("about", [
       "increment"
     ]),
-    navigateTo: url => window.history.pushState(null, null, url),
+    navigateTo,
     inputHandler(name, value) {
       console.log('inputHandler', name, value);
     }

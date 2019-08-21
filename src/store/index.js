@@ -9,7 +9,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: { 
         jwtToken: null,
-        modules: [{name: "Article", path: "/article"},{name: "Article #1", path: "/article/myFirstArticle"},{name: "Article #2", path: "/article/SecondToughArticle"},{name: "About", path: "/about"}]
+        modules: [{name: "Article", path: "/article"},{name: "Article #1", path: "/article/article-1"},{name: "Article #2", path: "/article/article-2"},{name: "About", path: "/about"}]
     },
     modules: {
         about: AboutModule,

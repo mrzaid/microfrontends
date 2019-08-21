@@ -3,8 +3,28 @@
     <router-link to="/">Home</router-link> <b> | </b>
     <router-link to="/about">About</router-link> <b> | </b>
     <router-link to="/article">Article</router-link>
+      
   </div>
 </template>
+
+<script>
+import { mapState } from 'vuex';
+import { navigateTo } from '../shared/helper/index';
+export default {
+  components: { },
+  computed: {
+    ...mapState(["jwtToken"])
+  },
+  created() {
+    if(!this.jwtToken) {
+      this.navigateTo('/auth')
+    }
+  },
+  methods: {
+    navigateTo
+  }
+};
+</script>
 
 <style lang="scss">
 :root {
@@ -12,7 +32,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
-  color: #ffff;
+  // color: #ffff;
 }
 #nav {
   padding: 30px;

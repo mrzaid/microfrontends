@@ -1,21 +1,28 @@
 <template>
-  <div id="article">
-    <div>
-      <b>Article >> </b>
-      <router-link to="/">Article Home</router-link> |
-      <router-link to="/add">Add Article</router-link>
-    </div>
-    <router-view />
+  <div>
+      <h1>Auth/Login Module</h1>
   </div>
 </template>
 
 <script>
-import { mapActions, mapMutations, mapState } from 'vuex';
+import { mapState } from 'vuex';
+import ImagePicker from '../shared/demo-image-picker/image-picker';
 import { navigateTo } from '../shared/helper/index';
 export default {
-  components: {},
+  components: {
+    'demo-image-picker': ImagePicker
+  },
+  computed: {
+    ...mapState(["jwtToken"])
+  },
+  created() {
+    console.log()
+  },
   methods: {
-    navigateTo
+    navigateTo,
+    imageSelectHandler(f) {
+
+    }
   }
 };
 </script>
@@ -28,7 +35,7 @@ export default {
   // text-align: center;
   color: #2c3e50;
 }
-#article {
+#sidebar {
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -38,4 +45,3 @@ export default {
   }
 }
 </style>
-
