@@ -1,0 +1,45 @@
+import Vue from "vue";
+import Router from "vue-router";
+// import Home from "./views/Home.vue";
+// import About from "./views/About.vue";
+
+Vue.use(Router);
+
+// import landingPage from "./components/LandingPage.vue";
+// // landingPage
+// export default new Router({
+//   routes: [
+//     {
+//       path: "/",
+//       name: "Home",
+//       component: landingPage,
+//       props: { currentComponent: "Home" }
+//     },
+//     {
+//       path: "/about",
+//       name: "About",
+//       component: landingPage,
+//       props: { currentComponent: "About" }
+//     }
+//   ]
+// });
+
+// import RegistrationWrapper from "./components/RegistrationWrapper.vue";
+// export default new Router({
+//   routes: [
+//     {
+//       path: "/",
+//       component: {
+//         default: Home,
+//         wrapper: RegistrationWrapper
+//       }
+//     },
+//     {
+//       path: "/about",
+//       component: {
+//         default: About,
+//         wrapper: RegistrationWrapper
+//       }
+//     }
+//   ]
+// });

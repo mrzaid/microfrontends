@@ -1,0 +1,38 @@
+{
+  "name": "root-app",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Yousuf Qutubuddin",
+    "username": "uqutub",
+    "email": "usuf52@gmail.com"
+  },
+  "repository": "github:uqutub/mircofrontends-webcomponent",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "wc": "vue-cli-service build --target wc --name my-custom-element ./src/App.vue"
+  },
+  "dependencies": {
+    "@vue/web-component-wrapper": "^1.2.0",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "copy-webpack-plugin": "^5.0.4",
+    "core-js": "^2.6.5",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

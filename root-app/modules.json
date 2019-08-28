@@ -1,0 +1,44 @@
+{
+    "routes": [
+        {
+            "name": "Article",
+            "path": "/article",
+            "component": "article-app",
+            "tag": "<article-app></article-app>",
+            "showRoute": true,
+            "module": "../article-app/dist/article-app.js"
+        },
+        {
+            "name": "Image",
+            "path": "/image",
+            "component": "image-app",
+            "tag": "<image-app></image-app>",
+            "showRoute": true,
+            "module": "../image-app/dist/image-app.js"
+        },
+        {
+            "name": "Login",
+            "path": "/login",
+            "component": "auth-app",
+            "tag": "<auth-app></auth-app>",
+            "showRoute": true,
+            "module": "../auth-app/dist/auth-app.js"
+        },
+        {
+            "name": "DemoGrid",
+            "path": "/demoGrid",
+            "component": "demo-grid",
+            "tag": "<demo-grid></demo-grid>",
+            "showRoute": false,
+            "module": "../demo-grid/dist/demo-grid.js"
+        },
+        {
+            "name": "DemoInput",
+            "path": "/demoInput",
+            "component": "demo-input",
+            "tag": "<demo-input></demo-input>",
+            "showRoute": false,
+            "module": "../demo-input/dist/demo-input.js"
+        }
+    ]
+}
