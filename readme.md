@@ -6,9 +6,9 @@ We have two layers of Application - **Root Application** and **Separate Modules/
 
 ### Root Application
 
-In Root Application we have two files:
+In Root Application we have ~~two~~ a file:
 1.  modules.json
-2.  modules.js
+2.  ~~modules.js~~
 
 In **modules.json** we should add all modules/components, and in that object we have properties in which we are defining: module name, module route, module application tag.
 
@@ -21,13 +21,15 @@ With the help of _json_ file we can create dynamic routes and if we need to show
 > "component": "article-app",  	// component Tag
 > "tag": "<article-app></article-app>",  	// tag (optional)
 > "showRoute": true,  // if we need to show in sidebar
-> "module": "../article-app/dist/article-app.js"  // path of your component (optional)
+> "module": "/module/article-app.min.js"  // path of your component 
  }
  
-In  **modules.js** we have to add all our modules/component compiled path, that is compiled by web component, and need to import those module/component in Root Application, so we can easily access all created web components in different modules/component as well.
+~~In  **modules.js** we have to add all our modules/component compiled path, that is compiled by web component, and need to import those module/component in Root Application, so we can easily access all created web components in different modules/component as well.~~
 
-> Import Example:
-import "app-path/dist/wc-module.js";
+> ~~Import Example:
+import "app-path/dist/wc-module.js";~~
+
+Now we have removed the dependency of **modules.js**. So now we can build directly modules into our root application and importing into html file using javascript by script tag with the help of **modules.json**
 
 After that the challenging part is the routing of **web components**, but for that we need to use web component router because we cannot use _Vue Router_ for web components routing. For that we used **@vaadin/router**
 
@@ -41,7 +43,7 @@ It is a two step process - in a first step we need to add package and on second 
 
 1.  Package: _yarn add @vue/web-component-wrapper_
 2.  Add command in scripts: _"wc": "vue-cli-service build --target wc --name article-app ./src/App.vue"_
-3. To build: _yarn run wc_
+3. To build: ~~_yarn run wc_~~ _yarn run build:toRoot_
 
 ##### Please Note:
 
