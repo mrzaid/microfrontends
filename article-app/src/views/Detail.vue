@@ -34,7 +34,6 @@ export default {
   computed: {
   },
   created() {
-    console.log('this.$route ', this.$route)
     this.article = this.$route.query.data || null;
   },
   methods: {

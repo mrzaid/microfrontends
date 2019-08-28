@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { setTimeout } from 'timers';
+
 export default {
   // replace: true,
   props: {

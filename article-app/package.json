@@ -11,7 +11,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "wc": "vue-cli-service build --target wc --name article-app ./src/App.vue"
+    "wc": "vue-cli-service build --target wc --name article-app ./src/App.vue",
+    "build:toRoot": "vue-cli-service build --target wc --no-clean --dest ../root-app/public/modules --name article-app ./src/App.vue"
   },
   "dependencies": {
     "@vue/web-component-wrapper": "^1.2.0",

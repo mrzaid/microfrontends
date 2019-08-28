@@ -12,6 +12,7 @@
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import initRouter from './initRouter';
+import { setTimeout } from 'timers';
 
 export default {
   name: 'app',
@@ -31,7 +32,9 @@ export default {
     }
   },
   mounted() {
-    initRouter(this.jwtToken);
+    setTimeout(() => {
+      initRouter(this.jwtToken);
+    }, 500)
   }
 }
 </script>
