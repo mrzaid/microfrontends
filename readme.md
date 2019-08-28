@@ -42,7 +42,7 @@ Once created, need to add one package to wrapped up application/module/component
 It is a two step process - in a first step we need to add package and on second we need to create a build from that library/package of web component wrapper, that needs the application starting/root component. Usually, and in our case, its **“src/App.vue”** and it takes name to create custom tag name to use that tag in other application. Add that build command into project **package.json > scripts**
 
 1.  Package: _yarn add @vue/web-component-wrapper_
-2.  Add command in scripts: _"wc": "vue-cli-service build --target wc --name article-app ./src/App.vue"_
+2.  Add command in scripts: ~~_"wc": "vue-cli-service build --target wc --name article-app ./src/App.vue"_~~ _"build:toRoot": "vue-cli-service build --target wc --no-clean --dest ../root-app/public/modules --name auth-app ./src/App.vue"_
 3. To build: ~~_yarn run wc_~~ _yarn run build:toRoot_
 
 ##### Please Note:
